@@ -1,5 +1,6 @@
 package org.example.entities;
 
+import aj.org.objectweb.asm.commons.Remapper;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,10 +20,9 @@ public class Authority {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAuthority;
 
-    private String nombre;
+    private String name;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "authority")
+    @ManyToMany(mappedBy = "authorities")
     private List<Usuario> usuarios;
-
 }

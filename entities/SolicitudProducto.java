@@ -32,18 +32,22 @@ public class SolicitudProducto {
     private LocalDate fechaPago;
     private Integer numGalones;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "estado_solicitud_id")
     private EstadoSolicitud estadoSolicitud;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "tipo_pago_id")
     private TipoDePago tipoDePago;

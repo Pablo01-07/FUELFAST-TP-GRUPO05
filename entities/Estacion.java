@@ -23,10 +23,12 @@ public class Estacion {
     private String direccion;
     private String telefono;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "proveedor_id")
     private Proveedor proveedor;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "ubigeo_id")
     private Ubigeo ubigeo;

@@ -30,6 +30,7 @@ public class Delivery {
     private LocalTime horaEntrega;
     private Double precio;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "estacion_id")
     private Estacion estacion;

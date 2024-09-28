@@ -25,6 +25,7 @@ public class DetallePedido {
     @JoinColumn(name = "solicitud_id")
     private SolicitudProducto solicitudProducto;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "stock_producto_id")
     private StockProducto stockProducto;

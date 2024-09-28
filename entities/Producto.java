@@ -21,6 +21,7 @@ public class Producto {
 
     private Double precio;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "tipo_producto_id")
     private TipoProducto tipoProducto;

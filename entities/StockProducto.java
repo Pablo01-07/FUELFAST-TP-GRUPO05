@@ -1,5 +1,6 @@
 package org.example.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,10 +20,12 @@ public class StockProducto {
     private Integer stock;
     private Double precio;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "producto_id")
     private Producto producto;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "estacion_id")
     private Estacion estacion;
